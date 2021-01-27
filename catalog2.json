@@ -1,0 +1,38 @@
+[
+    {
+        "name": "BG00 15x90x10 непол.Рект (Керамический гранит)",
+        "size": 0.131,
+        "vendor_cod": 37553,
+        "noginsk_available": 2.88,
+        "noginsk_all": 2.88,
+        "samara_available": 0,
+        "samara_all": 0
+    },
+    {
+        "name": "BG00 15x90x10 непол.Рект (Керамический гранит)",
+        "vendor_cod": 37554,
+        "size": 0.131,
+        "noginsk_available": 0,
+        "noginsk_all": 0,
+        "samara_available": 3.33,
+        "samara_all": 3.33
+    },
+    {
+        "name": "BG00 15x90x10 непол.Рект (Керамический гранит)",
+        "vendor_cod": 37555,
+        "size": 0.131,
+        "noginsk_available": 0,
+        "noginsk_all": 0,
+        "samara_available": 0,
+        "samara_all": 0
+    },
+    {
+        "name": "BG00 15x90x10 непол.Рект (Керамический гранит)",
+        "vendor_cod": 37556,
+        "size": 0.131,
+        "noginsk_available": 2.88,
+        "noginsk_all": 2.88,
+        "samara_available": 3.22,
+        "samara_all": 5.34
+    }
+]

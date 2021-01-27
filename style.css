@@ -12,21 +12,31 @@ test{
   
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
 
 body{
   margin: 0px;
   padding: 0px;
-  max-height: 100vh;
   font-family: 'Roboto';
+  height: 100%;
 }
 
 .grid-container{
     display: grid;
     padding: 0;
     margin: 0;
-    max-height: 100vh;  /* //уточнить , почему без этого свойства не во весь экран */
+    height:100%;
     grid-template-columns: 1fr 8fr;
-    grid-template-rows: 1fr 5fr 0.5fr; 
+    grid-template-rows: auto 1fr auto;
     row-gap: 10px;
     background:#F6F6F6 ;  
     grid-template-areas:
@@ -47,8 +57,7 @@ body{
   display: flex;
   flex-direction:row-reverse;
   justify-content: flex-start;
-  padding: 20px;
-  height: 100%;
+  height: 100px;
   
  
 }
@@ -56,7 +65,6 @@ body{
  background: #EAECF0;
  font: 12pt roboto white;
  padding: 10px;
- height:70px;
  border-radius: 2%;
  margin: 10px;
 }
@@ -66,12 +74,12 @@ body{
 
 .header-content-area.small{
   display: flex;
-  width:20%;
+  width:250px;
  }
 
  .header-content-area.big{
    display: flex;
-   width:35%;
+   width:500px;
    align-items: stretch;
    
    
@@ -79,7 +87,7 @@ body{
 
  .header-content-area-big-left{
   display: flex;
-  width: 15%;
+  width: 10%;
 }
 .header-content-area-big-mid{
   display: flex;
@@ -87,7 +95,7 @@ body{
 }
 .header-content-area-big-right{
   display: flex;
-  width: 40%;
+  width: 45%;
   flex-direction: column;
   height: 100%;
 }
@@ -100,10 +108,6 @@ select.header{
 }
 
 
-
-
-
-
  ul.header-content-ul{
   list-style:none;
   padding-inline-start: 0px;
@@ -112,9 +116,6 @@ select.header{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
  }
-
-
- 
 
 
 
@@ -130,11 +131,12 @@ select.header{
       padding: 20px;
       display: flex;
       flex-direction: column;
+      padding-bottom: 0;
 
     
     }
     .table-scroll{
-      height: 400px;
+      height: 300px;
       overflow-y: auto;
       border: #FFFFFF solid 1px;  
       border-radius: 10px; 
@@ -163,6 +165,8 @@ select.header{
   
     }
 
+
+
     table.main-table-content tbody tr td{
       border-top: #FFFFFF solid 1px;  
       padding: 25px;
@@ -182,12 +186,11 @@ select.header{
 
     .main-button-top{
       padding-top: 10px;
+      
       display: flex;
       flex-direction: row-reverse;
       
     }
-
-    
     .main-button-bottom{
       padding-top: 10px;
       display: flex;
@@ -215,6 +218,26 @@ select.header{
       justify-content: center;
   }
 
+  .sidebar-cart-area
+  {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow-y: auto;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+
+  }
+
+  .hr{
+    border: none; 
+    background-color:white;
+    height: .5px;
+  }
+
+
   
   
   .menu-logo{
@@ -222,7 +245,7 @@ select.header{
      padding-bottom: 60px;
   }
   
-  a{
+  a.menu-item{
     color: white;
     font: 14pt roboto;
     text-decoration: none;
@@ -252,20 +275,31 @@ select.header{
 
   .footter {
        grid-area: footter;
-       background: #24272C
+       background: #24272C;
+       flex: 0 0 auto;
+       
+      
     }
   .footter-content-area{
     /* padding: 10px; */
     display: flex;
     justify-content:space-between;
     align-items: center;
-    height: 100%;
+    height: 90px;
   }
 
 
   .footter-content-item{
     justify-content: center;
     margin: 10px;
+  }
+
+
+  a.footter-content-item{
+    color: white;
+    font: 12pt;
+    text-decoration: none;
+
   }
 
 /* 
@@ -277,13 +311,19 @@ button.bt-small{
   width: 100px;
   border-radius: 5px;
   margin: 15px;
+  cursor: pointer;
 }
+
+
+
+
 
 button.bt-medium{
   height: 50px;
   width: 150px;
   border-radius: 5px;
   margin: 15px;
+  cursor: pointer;
 }
 
 
@@ -292,6 +332,7 @@ button.bt-big{
   width: 250px;
   border-radius: 5px;
   margin: 15px;
+  cursor: pointer;
 }
 
 
@@ -299,13 +340,25 @@ button.white{
   border-color: black;
   background: #FFFFFF;
   border: 1px solid black;
+  transition-duration: 0.4s;
 }
+
+
+button.white:hover{
+  background-color: #ececec;
+}
+
 
 button.red{
   border: none;
-  background: #8A2715;
+  background: #B02C15;;
   color:white;
  }
+ 
+ button.red:hover{
+   background-color: #8A2715;
+ }
+
 
  button.blue{
   border: none;
@@ -313,17 +366,30 @@ button.red{
   color:white;
  }
 
- button.grey{
-   border: none;
-   background:#EAECF0;
- }
+ button.blue:hover{
+  background-color: #8CA3D1;
 
+ }
 
  button.header{
   height: 40% ;
+  cursor: pointer;
 
  }
 
+ button.catalog-table{
+  display: none;
+  
+   
+ }
+
+a.a-catalog-table{
+    color: #8A2715;
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
 
 
 
