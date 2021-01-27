@@ -42,7 +42,9 @@ let catalog_json = `[
 
 
 //корзина
-let cart = [];
+
+const cart = [];
+
 
 
 /// подсветка активного меню sidebar
@@ -117,6 +119,7 @@ add_items_to_cart();
 
 function add_items_to_cart() {
 
+
     let catalog_table_body_raws = document.querySelectorAll("#catalog-table-body tr");
     let add_buttons = document.querySelectorAll("button.catalog-table");
 
@@ -135,8 +138,8 @@ function add_items_to_cart() {
 
 draw_cart();
 function draw_cart() {
-    let out = document.querySelector(".sidebar-cart-area");
 
+    let out = document.querySelector(".sidebar-cart-area");
     let context = "";
     for (let index = 0; index < cart.length; index++) {
         const element = cart[index];
@@ -148,6 +151,8 @@ function draw_cart() {
 
 }
 
+
+console.log(cart);
 
 
 
